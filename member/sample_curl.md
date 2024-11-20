@@ -1,0 +1,2 @@
+curl -X GET 'https://286e8006-73d0-4821-ad9e-090af7549e74-00-3b2ug2jl02rqu.worf.replit.dev/members/1' -H "Authorization: Bearer INSERT_TOKEN" -H 'Content-Type: application/json'
+{"id":1,"member_id":"e4b055ba","first_name":"Jane","last_name":"Smith","relationship":"Self","created_date":"2024-11-15T15:44:59.402957+00:00","created_by":"system","updated_date":null}

@@ -1,0 +1,20 @@
+run = ["uvicorn", "main:app", "--host", "0.0.0.0", "--reload"]
+modules = ["python-3.11"]
+
+hidden = [".pythonlibs"]
+
+[nix]
+channel = "stable-24_05"
+# Add the following packages
+packages = [
+    "awscli2",
+    "python311Packages.aws-sam-cli"
+]
+
+[deployment]
+run = ["uvicorn", "main:app", "--host", "0.0.0.0"]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 8000
+externalPort = 80

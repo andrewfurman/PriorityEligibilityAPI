@@ -1,0 +1,12 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "member-service"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+resolve_s3 = true
+s3_prefix = "member-service"
+image_repositories = []
+parameter_overrides = "DatabaseUrl=\"${env:DATABASE_URL}\" CognitoUserPoolId=\"${env:COGNITO_USER_POOL_ID}\" CognitoAppClientId=\"${env:COGNITO_APP_CLIENT_ID}\""
